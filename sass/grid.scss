@@ -1,0 +1,49 @@
+$ju_width: 1366;
+$desktop: 1200;
+$tablet: 960;
+$mobile: 640;
+
+@mixin grid($grid_prefix) {
+
+  @each $size in 3,4,6,8,9,12,24{
+
+    @for $i from 1 through $size {
+      .ju-col-#{$grid_prefix}-#{$i}of#{$size} { width: $i*(100/$size)+%; }
+      .ju-col-#{$grid_prefix}-offset-left-#{$i}of#{$size} { margin-left: $i*(100/$size)+%; }
+      .ju-col-#{$grid_prefix}-offset-right-#{$i}of#{$size} { margin-right: $i*(100/$size)+%; }
+      .ju-col-#{$grid_prefix}-push-left-#{$i}of#{$size} { left: $i*(100/$size)+%; }
+      .ju-col-#{$grid_prefix}-pull-right-#{$i}of#{$size} { right: $i*(100/$size)+%; }
+    }
+  }
+
+}
+
+*{box-sizing: border-box}
+.ju-row{overflow: hidden}
+
+[class*="ju-col-"]{
+  float:left;position: relative;min-height: 1px;padding: 11px;
+}
+.group[class*="ju-col-"]{padding: 0;}
+
+@include grid(xs);
+
+/*  mobile */
+@media (min-width: #{$mobile} + 'px') {
+  @include grid(xs);
+}
+
+/* pre mobile */
+@media (min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px') {
+  @include grid(ms);
+}
+
+/* tablet */
+@media (min-width: #{$tablet} + 'px') {
+  @include grid(md);
+}
+
+/* desktop */
+@media (min-width: #{$desktop} + 'px') {
+  @include grid(lg);
+}

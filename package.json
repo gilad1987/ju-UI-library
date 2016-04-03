@@ -1,0 +1,20 @@
+{
+  "name": "jerusalemu-ui-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilad takoni",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-clean-css": "^2.0.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.0.6"
+  }
+}

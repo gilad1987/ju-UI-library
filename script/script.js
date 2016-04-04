@@ -8,13 +8,16 @@ function gridGenerate(columns){
     var column;
     var grid = document.getElementById('grid');
 
+    function addBackground(element){
+        return element.style.background = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+                return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+    }
     function createCol(column_width,row){
         column = document.createElement('div');
         var class_name = 'ju-col-lg-'+column_width+'of24';
         column.innerText = '.'+class_name;
         column.classList.add(class_name);
-        column.style.background = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
-                return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+        addBackground(column);
         row.appendChild(column);
     }
 

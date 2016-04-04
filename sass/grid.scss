@@ -5,7 +5,7 @@ $mobile: 640;
 
 @mixin grid($grid_prefix) {
 
-  @each $size in 3,4,6,8,9,12,24{
+  @each $size in 9,24{
 
     @for $i from 1 through $size {
       .ju-col-#{$grid_prefix}-#{$i}of#{$size} { width: $i*(100/$size)+%; }
@@ -17,11 +17,11 @@ $mobile: 640;
   }
 
 }
-
+.row{overflow: hidden}
 *{box-sizing: border-box}
 .ju-row{overflow: hidden}
 
-[class*="ju-col-"]{
+[class^="ju-col-"]{
   float:left;position: relative;min-height: 1px;padding: 11px;
 }
 .group[class*="ju-col-"]{padding: 0;}
@@ -29,9 +29,7 @@ $mobile: 640;
 @include grid(xs);
 
 /*  mobile */
-@media (min-width: #{$mobile} + 'px') {
-  @include grid(xs);
-}
+@media (min-width: #{$mobile} + 'px') {  }
 
 /* pre mobile */
 @media (min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px') {

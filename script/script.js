@@ -3,9 +3,7 @@
  */
 
 function gridGenerate(columns){
-    var j=0;
 
-    var column;
     var grid = document.getElementById('grid');
 
     function addBackground(element){
@@ -13,7 +11,7 @@ function gridGenerate(columns){
                 return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
     }
     function createCol(column_width,row){
-        column = document.createElement('div');
+        var column = document.createElement('div');
         var class_name = 'ju-col-lg-'+column_width+'of24';
         column.innerText = '.'+class_name;
         column.classList.add(class_name);
@@ -28,7 +26,7 @@ function gridGenerate(columns){
         row.classList.add('row');
         row.classList.add('lg-'+column_width+'of24');
 
-        for(;j<current;j++){
+        for(j=0;j<current;j++){
             createCol(column_width,row);
         }
         grid.appendChild(row);

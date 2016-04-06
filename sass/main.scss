@@ -1,20 +1,27 @@
-@import "variables";
+@import "helpers/variables";
 
-@import "grid";
-@import "commons";
-@import "buttons";
-@import "forms";
-@import "layout";
-@import "typography";
+@import "base/commons";
+@import "base/colors";
+@import "base/typography";
+
+
+@import "layout/grid";
+@import "layout/layout";
+@import "layout/navigation";
+
+@import "components/buttons";
+@import "components/forms";
+
+
 
 /* desktop -- min-width: #{$desktop} + 'px' */
-@import "desktop";
+@import "responsive/desktop";
 /* tablet -- min-width: #{$tablet} + 'px' */
-@import "tablet";
+@import "responsive/tablet";
 /* mobile-tablet -- min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px' */
-@import "mobile-tablet";
+@import "responsive/mobile-tablet";
 /* mobile -- min-width: #{$mobile} + 'px' */
-@import "mobile";
+@import "responsive/mobile";
 
 
 

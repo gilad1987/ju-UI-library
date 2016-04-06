@@ -1,0 +1,31 @@
+@import "../helpers/variables";
+@import "../helpers/mixin";
+
+.row{overflow: hidden}
+*{box-sizing: border-box}
+.ju-row{overflow: hidden}
+
+[class^="ju-col-"]{
+  float:left;position: relative;min-height: 1px;padding: 11px;
+}
+.group[class*="ju-col-"]{padding: 0;}
+
+@include grid(xs);
+
+/*  mobile */
+@media (min-width: #{$mobile} + 'px') {  }
+
+/* pre mobile */
+@media (min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px') {
+  @include grid(ms);
+}
+
+/* tablet */
+@media (min-width: #{$tablet} + 'px') {
+  @include grid(md);
+}
+
+/* desktop */
+@media (min-width: #{$desktop} + 'px') {
+  @include grid(lg);
+}

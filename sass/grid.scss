@@ -1,7 +1,4 @@
-$ju_width: 1366;
-$desktop: 1200;
-$tablet: 960;
-$mobile: 640;
+@import "variables";
 
 @mixin grid($grid_prefix) {
 

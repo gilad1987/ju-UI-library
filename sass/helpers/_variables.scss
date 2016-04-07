@@ -1,4 +1,21 @@
 $ju_width: 1366 !global;
+
+$ju-gutter:22;
+
+// Responsive size
 $desktop: 1200 !global;
 $tablet: 960 !global;
 $mobile: 640 !global;
+
+// Font weight
+$font-weight-thin:100;
+$font-weight-light:300;
+$font-weight-normal:400;
+$font-weight-medium:500;
+$font-weight-bold:700;
+$font-weight-ultra-bold:900;
+
+// Font size
+$font-size-input:16;
+$font-size-input-error:12;
+

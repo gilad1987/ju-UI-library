@@ -2,7 +2,7 @@
  * Created by giladtakoni on 04/04/2016.
  */
 
-function gridGenerate(columns){
+function gridGenerate(columns,sum_column){
 
     var grid = document.getElementById('grid');
 
@@ -12,7 +12,7 @@ function gridGenerate(columns){
     }
     function createCol(column_width,row){
         var column = document.createElement('div');
-        var class_name = 'ju-col-lg-'+column_width+'of24';
+        var class_name = 'ju-col-lg-'+column_width+'of'+sum_column;
         column.innerText = '.'+class_name;
         column.classList.add(class_name);
         addBackground(column);
@@ -21,10 +21,10 @@ function gridGenerate(columns){
 
     function createRow(current){
         var row = document.createElement('div'),
-            column_width = 24/current;
+            column_width = sum_column/current;
 
         row.classList.add('row');
-        row.classList.add('lg-'+column_width+'of24');
+        row.classList.add('lg-'+column_width+'of'+sum_column);
 
         for(j=0;j<current;j++){
             createCol(column_width,row);
@@ -39,7 +39,8 @@ function gridGenerate(columns){
 
 function onDOMLoad(e){
     var columns = [1,2,3,4,6,8,12,24];
-    gridGenerate(columns);
+    gridGenerate(columns,24);
+    gridGenerate([9],9);
 }
 
 document.addEventListener("DOMContentLoaded", onDOMLoad);

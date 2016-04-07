@@ -8,7 +8,8 @@ var SCRIPTS_SRC = [
 ];
 
 var STYLES_SRC = [
-    'css/**/*.css'
+    'css/**/*.css',
+    //'!css/main.css'
 ];
 
 var is_production = false;
@@ -22,7 +23,9 @@ var VERSION = (function(){
 })();
 
 gulp.task('sass', function () {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src([
+         './sass/**/*.scss'
+    ])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
@@ -61,7 +64,7 @@ gulp.task('minify-css', function() {
 // must in html fro Css         <!-- inject:css --><!-- endinject -->
 
 var inject = require("gulp-inject");
-gulp.task('js_css_injector:developer', function() {
+gulp.task('js_css_injector', function() {
 
     var options = {
         addRootSlash:false,
@@ -88,16 +91,24 @@ gulp.task('js_css_injector:developer', function() {
     }
 
 
-    gulp.src('./index.html')
+    gulp.src('./index.php')
         .pipe(inject(gulp.src(resources,{read: false}),options))
         .pipe(gulp.dest(""));
 });
 
 /* ------------------------------------- watch:scripts --------------------------------------------*/
 
-gulp.task('watch:injector_js_css_to_html', function() {
+gulp.task('injector_js_css_to_html:watch', function() {
     var files = SCRIPTS_SRC.concat(STYLES_SRC);
     gulp.watch(files,
-        ['js_css_injector:developer']
+        ['js_css_injector']
     );
 });
+
+/* ------------------------------------- default --------------------------------------------*/
+gulp.task('default',[
+    'sass',
+    'js_css_injector',
+    'injector_js_css_to_html:watch',
+    'sass:watch'
+]);

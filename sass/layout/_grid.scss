@@ -1,7 +1,6 @@
 @import "../helpers/variables";
 @import "../helpers/mixin";
 
-.row{overflow: hidden}
 *{box-sizing: border-box}
 .ju-row{overflow: hidden}
 
@@ -10,22 +9,22 @@
 }
 .group[class*="ju-col-"]{padding: 0;}
 
-@include grid(xs);
+@include makeGrid(xs);
 
 /*  mobile */
 @media (min-width: #{$mobile} + 'px') {  }
 
 /* pre mobile */
 @media (min-width: #{$mobile} + 'px' ) and (max-width: #{$tablet} + 'px') {
-  @include grid(ms);
+  @include makeGrid(ms);
 }
 
 /* tablet */
 @media (min-width: #{$tablet} + 'px') {
-  @include grid(md);
+  @include makeGrid(md);
 }
 
 /* desktop */
 @media (min-width: #{$desktop} + 'px') {
-  @include grid(lg);
+  @include makeGrid(lg);
 }

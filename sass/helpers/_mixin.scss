@@ -1,7 +1,5 @@
-@mixin grid($grid_prefix) {
-
+@mixin makeGrid($grid_prefix) {
   @each $size in 9,24{
-
     @for $i from 1 through $size {
       .ju-col-#{$grid_prefix}-#{$i}of#{$size} { width: $i*(100/$size)+%; }
       .ju-col-#{$grid_prefix}-offset-left-#{$i}of#{$size} { margin-left: $i*(100/$size)+%; }
@@ -10,5 +8,25 @@
       .ju-col-#{$grid_prefix}-pull-right-#{$i}of#{$size} { right: $i*(100/$size)+%; }
     }
   }
+}
 
+@function getItem($list,$key) {
+  @return nth($list, $key);
+}
+
+
+@mixin addButtonColorSuffix($button_colors) {
+  @each $name, $colors in $button_colors{
+    &-#{$name}{
+      background-color: #{getItem($colors,1)};
+      &:hover {  background-color:#{getItem($colors,2)};  }
+      &:active {  background-color: #{getItem($colors,3)};  }
+      &.is-inverse{
+        background-color: white;
+        color:#{getItem($colors,1)};
+        border:1px solid #{getItem($colors,1)};
+        &:hover {  color:white;background-color:#{getItem($colors,1)};  }
+      }
+    }
+  }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "jerusalemu-ui-library",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Gilad takoni"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gilad1987/ju-UI-library",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.0.0",
+    "components-font-awesome": "^4.5.0"
+  }
+}

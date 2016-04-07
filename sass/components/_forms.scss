@@ -1,0 +1,52 @@
+@import "../helpers/variables";
+@import "../base/colors";
+
+$input-padding:22;
+$input-radius:4;
+$input-height:40;
+$input-time-animation:100; // in ms
+$error-class-name:'error-message';
+
+input{outline: none}
+
+.InputWrapper{
+  .Input{
+    font-size:#{$font-size-input};
+    padding:0 #{$input-padding}px;
+    height:#{$input-height}px;
+    line-height: #{$input-height}px;
+    border:1px solid #{$color-light-gray};
+    display: block;
+    margin: #{$ju-gutter/2}px 0;
+    border-radius: #{$input-radius}px;
+    color:#{$color-primary-black};
+    width:100%;
+    animation-duration: #{$input-time-animation}ms;
+    &:hover{
+      border-color: #{$color-medium-gray};
+    }
+    &:focus,&:active{
+      border-color: #{$color-blue-primary};
+    }
+  }
+  .is-disabled{
+    border-color: #{$color-light-gray};
+    color: #{$color-light-gray};
+    &:focus,&:active,&:hover{border-color: #{$color-light-gray};}
+  }
+  &.error{
+    .#{$error-class-name}{
+      display: block;
+    }
+    .Input{
+      border-color: #{$color-red};
+    }
+  }
+  .#{$error-class-name}{
+    padding-left:#{$input-padding}px;
+    display: none;
+    color:#{$color-red};
+    font-size:#{$font-size-input-error}px;
+    i{float:right;}
+  }
+}

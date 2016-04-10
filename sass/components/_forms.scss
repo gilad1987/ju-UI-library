@@ -149,7 +149,7 @@ input{outline: none}
       position: absolute;left: -9999px;
       + label{display: inline-block; padding:10px 0; cursor: pointer;}
       + label .label{overflow: hidden;  display: inline-block;  margin-left: 7px;}
-      + label .switch-icon{float:left; position: relative; display: inline-block;      background-color: #{$color-light-gray };   width: 34px;  height: 14px;      border-radius: 8px;  cursor: -webkit-grab;  cursor: grab;}
+      + label .switch-icon{float:left; position: relative; display: inline-block;      background-color: #{$color-light-gray};   width: 34px;  height: 14px;      border-radius: 8px;  cursor: -webkit-grab;  cursor: grab;}
       + label .switch-icon:after{
         content:'';
         position: absolute;

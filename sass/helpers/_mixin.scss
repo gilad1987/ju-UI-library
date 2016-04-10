@@ -2,10 +2,10 @@
   @each $size in 9,24{
     @for $i from 1 through $size {
       .ju-col-#{$grid_prefix}-#{$i}of#{$size} { width: $i*(100/$size)+%; }
-      .ju-col-#{$grid_prefix}-offset-left-#{$i}of#{$size} { margin-left: $i*(100/$size)+%; }
-      .ju-col-#{$grid_prefix}-offset-right-#{$i}of#{$size} { margin-right: $i*(100/$size)+%; }
-      .ju-col-#{$grid_prefix}-push-left-#{$i}of#{$size} { left: $i*(100/$size)+%; }
-      .ju-col-#{$grid_prefix}-pull-right-#{$i}of#{$size} { right: $i*(100/$size)+%; }
+      .ju-col-#{$grid_prefix}-offset-left-#{$i}of#{$size} { margin-left: $i*(100/$size)%; }
+      .ju-col-#{$grid_prefix}-offset-right-#{$i}of#{$size} { margin-right: $i*(100/$size)%; }
+      .ju-col-#{$grid_prefix}-push-left-#{$i}of#{$size} { left: $i*(100/$size)%; }
+      .ju-col-#{$grid_prefix}-pull-right-#{$i}of#{$size} { right: $i*(100/$size)%; }
     }
   }
 }

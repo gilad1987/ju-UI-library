@@ -36,7 +36,7 @@ gulp.task('sass:watch', function () {
 
 var uglifycss = require('gulp-uglifycss');
 
-gulp.task('css', function () {
+gulp.task('uglify-css', function () {
     gulp.src('css/**/*.css')
         .pipe(uglifycss({
             "maxLineLen": 80,
@@ -111,4 +111,12 @@ gulp.task('default',[
     'js_css_injector',
     'injector_js_css_to_html:watch',
     'sass:watch'
+]);
+
+/* ------------------------------------- production --------------------------------------------*/
+gulp.task('production',[
+    'sass',
+    'uglify-css',
+    'minify-css',
+    'js_css_injector'
 ]);

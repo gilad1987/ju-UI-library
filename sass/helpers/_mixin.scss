@@ -17,7 +17,7 @@
 
 @mixin addButtonColorSuffix($button_colors) {
   @each $name, $colors in $button_colors{
-    &-#{$name}{
+    &--#{$name}{
       background-color: #{getItem($colors,1)};
       &:hover {  background-color:#{getItem($colors,2)};  }
       &:active {  background-color: #{getItem($colors,3)};  }
@@ -30,3 +30,21 @@
     }
   }
 }
+
+@mixin createUtilityBackgroundColors($button_colors) {
+  $suffix:('','--hover','--active');
+  @each $name, $colors in $button_colors{
+    @for $i from 1 through 3{
+      .u-Background--#{$name}#{getItem($suffix,$i)}{
+        background-color: #{getItem($colors,$i)};
+        .text{
+          &:after{
+
+            content:getItem($colors,$i); }
+        }
+      }
+    }
+  }
+
+}
+

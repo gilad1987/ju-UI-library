@@ -12,6 +12,7 @@
 <section class="buttons ju-width u-hidden">
     <?php $button_types = array('large','primary','secondary','small','mini','compact','tag'); ?>
     <?php $button_colors = array('blue-primary','blue-secondary','orange-primary'); ?>
+    <?php $colors_list = array_merge($button_colors,array('light-blue','cool-gray','pale-blue')); ?>
 
     <h1>Buttons</h1>
     <h4>Class list : Button Button[color name] Button[size] u-Radios-width[5/45] (is-animation | is-disable | is-inverse)</h4>

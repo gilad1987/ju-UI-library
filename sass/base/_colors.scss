@@ -34,18 +34,22 @@ $color-white: '#fff';
 $color-button-text-disabled:'#666';
 $color-button-background-disabled:'#e5e5e6';
 $color-red:'#f34235';
+$color-switch-button:'#f1f1f1';
 
 $color-social-facebook:'#3b5998';
 $color-social-twitter:'#55ACEE';
 $color-social-googlePlus:'#dd4b39';
 
+$color-switch-button-blue-checked:'rgb(142, 197, 231)';
+$color-switch-button-orange-checked:'rgb(255, 177, 131)';
+
 $button_colors: (
-        -blue-primary:($color-blue-primary,$color-blue-primary-hover,$color-blue-primary-active),
-        -blue-secondary:($color-blue-secondary,$color-blue-secondary-hover,$color-blue-secondary-active),
-        -orange-primary:($color-orange-primary,$color-orange-primary-hover,$color-orange-primary-active),
-        -light-blue:($color-light-blue,$color-light-blue-hover,$color-light-blue-active),
-        -cool-gray:($color-cool-gray,$color-cool-gray-hover,$color-cool-gray-active),
-        -pale-blue:($color-pale-blue,$color-pale-blue-hover,$color-pale-blue-active)
+        blue-primary:($color-blue-primary,$color-blue-primary-hover,$color-blue-primary-active),
+        blue-secondary:($color-blue-secondary,$color-blue-secondary-hover,$color-blue-secondary-active),
+        orange-primary:($color-orange-primary,$color-orange-primary-hover,$color-orange-primary-active),
+        light-blue:($color-light-blue,$color-light-blue-hover,$color-light-blue-active),
+        cool-gray:($color-cool-gray,$color-cool-gray-hover,$color-cool-gray-active),
+        pale-blue:($color-pale-blue,$color-pale-blue-hover,$color-pale-blue-active)
 );
 
 

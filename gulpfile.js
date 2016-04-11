@@ -57,6 +57,30 @@ gulp.task('minify-css', function() {
         .pipe(gulp.dest('dist'));
 });
 
+/* ------------------------------------- include resource to html ---------------------------------------*/
+var rename = require('gulp-rename');
+
+gulp.task('scss-import', function() {
+    return gulp.src('sass/helpers/_imports.scss')
+        /**
+         * Dynamically injects @import statements into the main app.less file, allowing
+         * .less files to be placed around the app structure with the component
+         * or page they apply to.
+         */
+        .pipe(inject(gulp.src(['sass/**/*.scss'], {}), {
+            starttag: '/* inject:scss */',
+            endtag: '/* endinject */',
+            transform: function (filepath) {
+                return '@import ".' + filepath + '";';
+            }
+        }))
+        .pipe(rename({
+            suffix: '.components'
+        }))
+        //.pipe(sass())
+        .pipe(gulp.dest('sass/'))
+        ;
+});
 
 /* ------------------------------------- include resource to html ---------------------------------------*/
 

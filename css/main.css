@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* [<namespace>-]<ComponentName>[-descendentName][--modifierName] */
 @import url(../bower_components/normalize-css/normalize.css);
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2293,7 +2292,7 @@ h4 {
   font-weight: 500; }
 
 .ColorBox {
-  height: 148px;
+  height: 162px;
   border-radius: 4px; }
   .ColorBox div {
     height: 50%; }
@@ -3829,6 +3828,9 @@ h4 {
   max-width: 1366px;
   margin: 0 auto; }
 
+font {
+  font-size: 13px; }
+
 .Button {
   text-align: center;
   border: none;
@@ -4225,6 +4227,8 @@ input {
   100% {
     transform: rotate(360deg); } }
 
+/* inject:scss */
+/* endinject */
 /* desktop -- min-width: 1200 + 'px' */
 /* tablet -- min-width: 960 + 'px' */
 /* mobile-tablet -- min-width: 640 + 'px' ) and (max-width: 960 + 'px' */

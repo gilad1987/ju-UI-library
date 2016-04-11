@@ -17,6 +17,8 @@
     "gulp-uglify": "^1.5.3"
   },
   "dependencies": {
+    "gulp-inject": "^4.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-uglifycss": "^1.0.6",
     "normalize.css": "^4.0.0"
   }

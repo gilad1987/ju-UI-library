@@ -6,10 +6,10 @@
     <title>UI Library</title>
 
     <!-- inject:js -->
-    <script src='script/script.js?v=833'></script>
+    <script src='script/script.js?v=3642'></script>
     <!-- endinject -->
     <!-- inject:css -->
-    <link rel='stylesheet' href='css/main.css?v=833'>
+    <link rel='stylesheet' href='css/main.css?v=3642'>
     <!-- endinject -->
 </head>
 <body>

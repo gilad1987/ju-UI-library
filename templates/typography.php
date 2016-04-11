@@ -19,7 +19,7 @@
 
     <div class="ju-col-lg-24of24">
         <?php for($i=1; $i<=4; $i++):;?>
-            <h<?php echo $i; ?>>Headline h<?php echo $i; ?> <h<?php echo $i; ?>>
+            <h<?php echo $i; ?>>Headline h<?php echo $i; ?> </h<?php echo $i; ?>>
         <?php endfor; ?>
     </div>
 

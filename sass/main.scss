@@ -1,4 +1,4 @@
-/* [<namespace>-]<ComponentName>[-descendentName][--modifierName] */
+// [<namespace>-]<ComponentName>[-descendentName][--modifierName]
 @import "../bower_components/normalize-css/normalize.css";
 @import "../bower_components/components-font-awesome/scss/font-awesome";
 
@@ -26,6 +26,7 @@
 @import "components/spinner-animation";
 
 
+@import "imports.components";
 
 /* desktop -- min-width: #{$desktop} + 'px' */
 @import "responsive/desktop";
